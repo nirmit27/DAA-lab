@@ -1,4 +1,4 @@
-from merge_sort import merge_sort
+''' Implementation of Insertion Sort '''
 
 
 def insertion_sort(arr):
