@@ -1,8 +1,8 @@
-''' Implementation of Quick Sort '''
+""" Implementation of Quick Sort """
 
 
 def partition(arr, low, high) -> int:
-    i = low-1
+    i = low - 1
     pivot = arr[high]
 
     for j in range(low, high):
@@ -10,23 +10,23 @@ def partition(arr, low, high) -> int:
             i += 1
             (arr[i], arr[j]) = (arr[j], arr[i])
 
-    (arr[i+1], arr[high]) = (arr[high], arr[i+1])
+    (arr[i + 1], arr[high]) = (arr[high], arr[i + 1])
 
-    return i+1
+    return i + 1
 
 
 def quick_sort(arr, low, high):
     if low < high:
         pivot = partition(arr, low, high)
 
-        quick_sort(arr, low, pivot-1)
-        quick_sort(arr, pivot+1, high)
+        quick_sort(arr, low, pivot - 1)
+        quick_sort(arr, pivot + 1, high)
 
 
 if __name__ == "__main__":
     arr = list(map(lambda x: int(x), input("\nEnter the array : ").split()))
 
-    quick_sort(arr, 0, len(arr)-1)
+    quick_sort(arr, 0, len(arr) - 1)
 
     print("\nSorted array:", end=' ')
     for x in arr:

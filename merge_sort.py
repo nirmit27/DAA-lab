@@ -1,10 +1,10 @@
-''' Implementation of Merge Sort '''
+""" Implementation of Merge Sort """
 
 
 def merge_sort(arr):
     if len(arr) > 1:
 
-        mid = len(arr)//2
+        mid = len(arr) // 2
 
         left = arr[:mid]
         right = arr[mid:]

@@ -1,23 +1,23 @@
-''' Implementation of Recursive Linear and Binary Search '''
+""" Implementation of Recursive Linear and Binary Search """
 
 
 def linear_search(arr, size, key):
     if size == 0:
         return -1
-    elif arr[size-1] == key:
+    elif arr[size - 1] == key:
         return size - 1
-    return linear_search(arr, size-1, key)
+    return linear_search(arr, size - 1, key)
 
 
 def binary_search(arr, l, r, x):
     if r >= l:
-        m = l + (r-l)//2
+        m = l + (r - l) // 2
         if arr[m] == x:
             return m
         elif arr[m] > arr[m]:
-            return binary_search(arr, l, m-1, x)
+            return binary_search(arr, l, m - 1, x)
         else:
-            return binary_search(arr, m+1, r, x)
+            return binary_search(arr, m + 1, r, x)
     else:
         return -1
 
@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     match ch:
         case 1:
-            index = binary_search(arr, 0, len(arr)-1, key)
+            index = binary_search(arr, 0, len(arr) - 1, key)
             print(f"\n{key} found at index : {index}\n") if index != - \
                 1 else print("\nKey not found.\n")
         case 2:
