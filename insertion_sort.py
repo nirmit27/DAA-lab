@@ -6,13 +6,13 @@ def insertion_sort(arr):
         return arr
 
     for i in range(1, len(arr)):
-        j = i-1
+        j = i - 1
         key = arr[i]
         while j >= 0 and key < arr[j]:
-            arr[j+1] = arr[j]
+            arr[j + 1] = arr[j]
             j -= 1
 
-        arr[j+1] = key
+        arr[j + 1] = key
 
 
 if __name__ == "__main__":
