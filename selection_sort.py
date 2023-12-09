@@ -3,19 +3,19 @@
 
 def selection_sort(arr):
     for i in range(len(arr)):
-        min = i
+        mini = i
         for j in range(i + 1, len(arr)):
-            if arr[j] < arr[min]:
-                min = j
-        (arr[min], arr[i]) = (arr[i], arr[min])
+            if arr[j] < arr[mini]:
+                mini = j
+        (arr[mini], arr[i]) = (arr[i], arr[mini])
 
 
 if __name__ == "__main__":
-    arr = list(map(lambda x: int(x), input("\nEnter the array : ").split()))
+    array = list(map(int, input("\nEnter the array : ").split()))
 
-    selection_sort(arr)
+    selection_sort(array)
 
     print("\nSorted array :", end=' ')
-    for x in arr:
+    for x in array:
         print(x, end=' ')
     print()

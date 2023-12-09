@@ -24,11 +24,11 @@ def quick_sort(arr, low, high):
 
 
 if __name__ == "__main__":
-    arr = list(map(lambda x: int(x), input("\nEnter the array : ").split()))
+    array = list(map(int, input("\nEnter the array : ").split()))
 
-    quick_sort(arr, 0, len(arr) - 1)
+    quick_sort(array, 0, len(array) - 1)
 
     print("\nSorted array:", end=' ')
-    for x in arr:
+    for x in array:
         print(x, end=' ')
     print()

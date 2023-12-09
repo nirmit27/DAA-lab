@@ -16,11 +16,11 @@ def insertion_sort(arr):
 
 
 if __name__ == "__main__":
-    arr = list(map(lambda x: int(x), input("\nEnter the array : ").split()))
+    array = list(map(int, input("\nEnter the array : ").split()))
 
-    insertion_sort(arr)
+    insertion_sort(array)
 
     print("\nSorted array :", end=' ')
-    for x in arr:
+    for x in array:
         print(x, end=' ')
     print()

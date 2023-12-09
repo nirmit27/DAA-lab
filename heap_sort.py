@@ -31,9 +31,9 @@ def heap_sort(arr):
 
 
 if __name__ == "__main__":
-    arr = list(map(lambda x: int(x), input("\nEnter the array : ").split()))
-    heap_sort(arr)
+    array = list(map(int, input("\nEnter the array : ").split()))
+    heap_sort(array)
     print("\nSorted array :", end=' ')
-    for x in arr:
+    for x in array:
         print(x, end=' ')
     print()
