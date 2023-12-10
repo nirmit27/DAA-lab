@@ -8,7 +8,7 @@ class Item:
         self.profit = profit
         self.weight = weight
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"( Profit : {self.profit}, Weight: {self.weight} )"
 
 
@@ -41,8 +41,7 @@ if __name__ == "__main__":
     w = int(input("Enter the Knapsack capacity (in kg): "))
 
     for _ in range(n := int(input("Enter the number of items : "))):
-        (pt, wt) = list(map(lambda x: int(x), input("Enter the profit and weight : ").split()))
-
+        (pt, wt) = list(map(int, input("Enter the profit and weight : ").split()))
         arr.append(Item(pt, wt))
 
     print(f"\nFinal profit : {round(fractional_knapsack(w, arr), 2)}")
