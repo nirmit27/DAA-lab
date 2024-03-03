@@ -14,7 +14,7 @@ def binary_search(arr, left, right, x):
         m = left + (right - left) // 2
         if arr[m] == x:
             return m
-        elif arr[m] > arr[m]:
+        elif arr[m] > x:
             return binary_search(arr, left, m - 1, x)
         else:
             return binary_search(arr, m + 1, right, x)
